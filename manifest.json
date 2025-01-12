@@ -9,3 +9,4 @@
  "options_ui": {"page": "options.html"},
  "icons": {"16": "icon16.png",  "32":  "icon32.png",
            "64": "icon64.png", "256": "icon256.png"}}
+"applications": { "gecko": { "id": "X@Y" } }
