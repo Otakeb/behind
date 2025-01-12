@@ -85,6 +85,7 @@ var wgDone = function() {
 	browser.storage.local.get('bypass').then(function(r) {
 		let elems = undefined;
 		if (r.bypass === 'big') {
+			setTimeout(() => {console.log('pause for load');}, 250);
 			elems = document.querySelectorAll('.largest img');
 		} else if (r.bypass === 'wide') {
 			elems = document.querySelectorAll('.widest img');
@@ -143,7 +144,7 @@ var makeLiElem = function (ul, el, idx) {
 						}
 					}
 					orderImagesBy(ul.childNodes, compFn);
-					setTimeout(wgDone(), 500); //500 ms delay on wgDone execution to slow bypass?
+					setTimeout(wgDone(), 200); //200 ms delay on wgDone execution to slow bypass?
 				}
 				im.onerror = function() {
 					im.onerror = function() {wgDone()};
