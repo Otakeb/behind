@@ -143,7 +143,7 @@ var makeLiElem = function (ul, el, idx) {
 						}
 					}
 					orderImagesBy(ul.childNodes, compFn);
-					wgDone();
+					setTimeout(wgDone(), 500); //500 ms delay on wgDone execution to slow bypass?
 				}
 				im.onerror = function() {
 					im.onerror = function() {wgDone()};
